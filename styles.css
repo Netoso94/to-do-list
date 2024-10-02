@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #5e37a8;
+  background-color: #f0f3ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.tarefa-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  position: relative;
+}
+
+.tarefa-header {
+  background-color: #b28bf6;
+  border-radius: 8px 8px 0 0;
+  padding: 10px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.tarefa-header h1 {
+  font-size: 20px;
+}
+
+.tarefa-lista {
+  list-style-type: none;
+  padding: 20px 0;
+}
+
+.tarefa-lista li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.tarefa-lista input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.tarefa-lista label {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.tarefa-lista .completed {
+  text-decoration: line-through;
+  color: #5e37a8;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #b0b0b0;
+}
+
+.new-task-btn {
+  background-color: #b28bf6;
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.new-task-btn:hover {
+  background-color: #a073f4;
+}
+
+/* Menu de opções */
+.menu-options {
+  display: none;
+  position: absolute;
+  left: 5%;
+  background-color: white;
+  border-radius: 5%;
+  border: 1px solid #ddd;
+  list-style: none;
+  padding: 10px;
+  margin-top: -80px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+.menu-options.show {
+  display: block;
+  opacity: 1;
+
+}
+
+.menu-options.hide {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.menu-options li {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.menu-options li:hover {
+  background-color: #b89ce7;
+  border-radius: 8%;
+}
+
+
+/* Estilização para a seleção de idioma */
+.language-options {
+  margin-top: 10px;
+}
+
+.language-options select {
+  padding: 5px;
+  font-size: 14px;
+}
+/* Modal */
+.modal {
+  display: none; /* Oculto inicialmente */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.modal-content input {
+  width: 50%;
+  padding: 5px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.modal-content button {
+  padding: 10px 20px;
+  background-color: #b28bf6;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #a073f4;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+}

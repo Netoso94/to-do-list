@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tarefas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="tarefa-container">
+    <div class="tarefa-header">
+      <button class="menu-btn">☰</button>
+      <h1>Lista de Tarefas</h1>
+    </div>
+    <ul class="tarefa-lista"></ul>
+    <button class="new-task-btn">+ Adicionar</button>
+    <ul class="menu-options">
+      <li id="save-tasks">Salvar Tarefas</li>
+      <li id="load-tasks">Carregar Tarefas</li>
+      <li id="delete-all">Excluir Tarefas</li>
+      <div class="language-options">
+        <label for="language-select">Mudar Idioma:</label>
+        <select id="language-select">
+          <option value="pt-br">Português</option>
+          <option value="en">Inglês</option>
+          <option value="zh">Chinês Mandarim</option>
+          <option value="hi">Hindi</option>
+          <option value="es">Espanhol</option>
+          <option value="fr">Francês</option>
+          <option value="ar">Árabe</option>
+          <option value="de">Alemão</option>
+          <option value="it">Italiano</option>
+        </select>
+      </div>
+    </ul>
+  </div>
+
+  <!-- Modal -->
+  <div id="taskModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3><p style="color: #b28bf6">Adicione uma tarefa</p></h3>
+      <input type="text" id="taskInput" placeholder="Digite a tarefa">
+      <button id="addTaskButton">Adicionar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
